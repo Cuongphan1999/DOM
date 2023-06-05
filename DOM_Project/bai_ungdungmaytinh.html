@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+      button{
+        width: 50px
+      }
+      
+    </style>
+    <h1>Caculator</h1>
+      <input type='number' id='number1' placeholder='enter_number1'>
+      <input type='number' id='number2' placeholder='enter_number2'> </br>
+    <br>
+      <p id="result">0</p>
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">-</button>
+      <button onclick="calculate('*')">*</button>
+      <button onclick="calculate('/')">/</button>
+<script>
+  function calculate(operator) {
+    let a = +document.getElementById('number1').value;
+    let b = +document.getElementById('number2').value;
+    let result;
+    
+    switch (operator) {
+      case "+": 
+        result = a + b;
+      break;
+      case "-": 
+        result = a - b;
+      break;
+      case "*": 
+        result = a * b;
+      break;
+      case "/": 
+      if(b == 0){
+        result = "khong chia het cho a"
+      }else{
+        result = a / b;
+      }
+        
+      break;
+
+    }
+    document.getElementById("result").innerText = result;
+  }
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
